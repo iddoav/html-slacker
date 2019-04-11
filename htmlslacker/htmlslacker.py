@@ -49,6 +49,8 @@ class HTMLSlacker(HTMLParser):
             self.output += '_'
         if tag == 'code':
             self.output += '`'
+        if tag == 'ul':
+            self.output += '\n'
         if tag == 'li':
             self.output += '•'
         if tag == 'a':
@@ -73,6 +75,8 @@ class HTMLSlacker(HTMLParser):
             self.output += '>'
         if tag == 'code':
             self.output += '`'
+        if tag == 'li':
+            self.output += '\n'
         if tag == 'style' or tag == 'script':
             self.skip = False
 
