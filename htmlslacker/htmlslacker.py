@@ -1,3 +1,4 @@
+# coding=utf-8
 try:
     from html.parser import HTMLParser
     from html.entities import name2codepoint
@@ -48,6 +49,8 @@ class HTMLSlacker(HTMLParser):
             self.output += '_'
         if tag == 'code':
             self.output += '`'
+        if tag == 'li':
+            self.output += '•'
         if tag == 'a':
             self.output += '<'
             for attr in attrs:
