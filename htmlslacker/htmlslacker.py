@@ -50,7 +50,7 @@ class HTMLSlacker(HTMLParser):
         if tag == 'code':
             self.output += '`'
         if tag == 'ul':
-            self.output += '\n'
+            self.output += LINEBR
         if tag == 'li':
             self.output += '•'
         if tag == 'a':
@@ -76,7 +76,7 @@ class HTMLSlacker(HTMLParser):
         if tag == 'code':
             self.output += '`'
         if tag == 'li':
-            self.output += '\n'
+            self.output += LINEBR
         if tag == 'style' or tag == 'script':
             self.skip = False
 

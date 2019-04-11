@@ -35,3 +35,10 @@ def test_link_with_target():
     expected = "Please click <http://xxx.com/t.html|here>"
     output = HTMLSlacker(html).get_output()
     assert(output == expected)
+
+
+def test_list():
+    html = '<ul><li>item1</li><li>item2</li><li>item3</li><li>item4</li></ul>'
+    expected = "\n•item1\n•item2\n•item3\n•item4\n"
+    output = HTMLSlacker(html).get_output()
+    assert(output == expected)
